@@ -7,6 +7,16 @@
 <body>
 <h1>マンダラート機能</h1>
 
+<% @workspaces.each do |workspace| %>
+　　<p>題名：<%= workspace.name %></p>
+　　<form action="/delete/mandalart/<%= workspace.id %>" method="post">
+		<input type="submit" value="DELETE">
+	</form>
+	<a href="/edit/mandalart/<%= workspace.id %>">EDIT</a>
+<% end %>
+
+
+
 <a href="/index">戻る</a><br>
 <a href="/workspace">New</a>
 </body>

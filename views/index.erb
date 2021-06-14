@@ -11,8 +11,9 @@
 	<h2>現在の状態：未ログイン</h2>
 <% else %>
     <a href="/signout">ログアウト</a>
-    <h2><%= User.find(session[:user]).user_name %></h2>
-    <a href="/mandalart">マンダラート機能</a><a href="/memo">メモ機能</a><br>
+    <h2><%= User.find(session[:user]).mail %></h2>
+ 
+    <a href="/user_workspaces/<%= User.find(session[:user]).id %>">マンダラート機能</a><a href="/user_memos/<%= User.find(session[:user]).id %>">メモ機能</a><br>
 <% end %>
 </body>
 </html>
