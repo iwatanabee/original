@@ -3,13 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>メモ機能</title>
+	<link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-<form action="/new/memo/id" method="post">
-	<p>題名：<input type="text" name="name"></p>
-	<p>本文：<input type="text" name="body"></p>
-	<input type="submit" value="新しくメモを追加">    
-</form>
+	
+	<div class="signin_body">
+	  <div class="cp_iptxt">
+		<h1>メモを入力</h1><br>
+		<form action="/new/memo/id" method="post">
+		　<div class="font_size">
+			<p>題名：<input type="text" name="name"></p>
+			<p>本文：<input type="text" name="body"></p>
+		  </div>
+		  <div class="right">
+			<input type="submit" value="新しくメモを追加">
+		  </div>
+		</form>
+	  </div>
+	</div>
 </body>
 </html>
 

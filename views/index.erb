@@ -2,18 +2,91 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title>アイデアメモリー</title>
+	<link rel="shortcut icon" href="img/logo_ideamemory.png">
+	<title>Idea Memory</title>
+	<link rel="stylesheet" href="/css/index.css">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script>
+      FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
 </head>
 <body>
-	<h1>アイデアメモリー</h1>
-<% unless session[:user] %>
-	<a href="/signin">ログイン</a><a href="/signup">新規登録</a><br>
-	<h2>現在の状態：未ログイン</h2>
-<% else %>
-    <a href="/signout">ログアウト</a>
-    <h2><%= User.find(session[:user]).mail %></h2>
- 
-    <a href="/user_workspaces/<%= User.find(session[:user]).id %>">マンダラート機能</a><a href="/user_memos/<%= User.find(session[:user]).id %>">メモ機能</a><br>
-<% end %>
+<div class="body">
+  <div class="title_space">	
+		<div class="title">
+			<h1>Idea Memory</h1>
+			
+		</div>
+	
+	
+  </div>
+ <div class="sign_body">
+  <div class="sign">
+		<% unless session[:user] %>
+		<h3>Idea Memory とは、思いついたアイデアをメモしたり、<br>
+		アイデア出しを行うためのマンダラートを作成できるwebサービスです。<br>
+		新規登録・ログインをして早速始めてみましょう<br>
+		</h3>
+		<br>
+		<br>
+		<h2>新規登録をする？それともログイン？</h2>
+		<div class="signup">
+			<a href="/signup">
+				<i class="fas fa-user-plus fa-4x" style="color:white;"></i>
+			</a><br>
+		 </div>
+		 <div class="sign-in">
+		 　
+		   <div class="sample-text1">
+		   	
+			<a href="/signin">
+				<i class="fas fa-sign-in-alt fa-4x" style="color:white;"></i>
+			</a><br>
+		   </div>
+		 </div>
+		 
+			
+		<% else %>
+           
+           	<h3>こんにちは、<%= User.find(session[:user]).mail %>さん。</h3><br>
+            <h3>今日もアイデアが溢れる1日をお過ごしください</h3><br><br><br>
+           
+		 <div class="kinou1">
+		    <a href="/user_workspaces/<%= User.find(session[:user]).id %>">
+		     <i class="fas fa-th fa-10x"　style="color:white;"></i>
+		    </a>
+		    <a href="/user_memos/<%= User.find(session[:user]).id %>">
+		     <i class="far fa-sticky-note fa-10x" style="color:white;"></i>
+		    </a><br>
+		 </div>
+		 <div class="right">
+		 	<pre>
+		                                                         <a href="/signout"><i class="fas fa-undo-alt fa-3x" style="color:white;"></i></a>
+		    </pre>
+		 </div>
+		<% end %>
+  </div>
+  </div>
+</div>
+
+<script>
+$(function () {
+  $(window).scroll(function () {
+    $('.fade').each(function () {
+      const targetElement = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight) {
+        $(this).addClass('view');
+      }
+    });
+  });
+});
+</script>
+
 </body>
+
+
 </html>

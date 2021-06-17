@@ -1,0 +1,372 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* 全体の横幅 */
+    width: auto;
+    /* 全体を中央寄せ */
+    margin: auto;
+    /* 全体の余白 */
+    padding: 10px;
+    
+    color:white;
+    
+    background-color:#33ede6;
+}
+input.text1{
+    width: 15em;
+    height: 2em;
+}
+
+.p-size{
+    font-size:20px;
+    margin:0px;
+    padding:0px;
+}
+
+.h1{
+    margin:5%;
+    padding:10%;
+    width: auto;
+    height: auto;
+    font-size:100px;
+    
+}
+.h3{
+    text-shadow:2px 2px 3px #f51818;
+}
+.h4{
+    text-shadow:2px 2px 3px #f51818;
+}
+
+.logo-img{
+    
+}
+.title{
+    text-align:center;
+    margin:1%;
+    padding:5%;
+    font-size:30px;
+    font-family: 'Merriweather', serif;
+}
+
+.title_space{
+    
+}
+
+.sign{
+    text-align:center;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+}
+
+.sign_body{
+    
+}
+
+.left{
+    padding:40px;
+    text-align:left;
+    font-size:25px;
+}
+
+.signin{
+    text-align:center;
+    height:auto;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:5%;
+    padding:10%;
+    width: auto;
+    height: auto;
+}
+.signin_body{
+    margin:30px 60px;
+    padding:10px 40px;
+    width: auto;
+    height: auto;
+    border: solid;
+    border-radius: 8px;
+    border-width: 20px;
+    
+    
+}
+.signup{
+    margin:1%;
+    padding:1%;
+    
+}
+.sign_up{
+    padding:10px;
+}
+
+
+.kinou1{
+    float: left;
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+.kinou{
+    float: left;
+    list-style: none;
+    margin:0px;
+    
+}
+
+
+.title_memo{
+    text-align:center;
+    margin:1%;
+    padding:5%;
+    font-size:20px;
+    font-family: 'Merriweather', serif;
+}
+.memo_body1{
+    text-align:center;
+    
+    
+}
+.memo_body{
+    text-align:right;
+    margin:1%;
+    padding:1%;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    
+}
+
+
+p{
+    text-align:left;
+    
+}
+
+.right{
+    text-align:right;
+}
+
+.border{
+    border: solid;
+    border-radius: 8px;
+    margin:3%;
+}
+
+
+.fade{
+  font-size:30px;
+  margin-top: 30vh;
+  text-align: center;
+  opacity : 0;
+  transition: opacity 3s;
+}
+.fade1{
+  margin-top: 10vh;
+  text-align: center;
+  opacity : 0;
+  transition: opacity 3s;
+  width:auto;
+}
+ 
+.fade.view{
+  margin-top: 1vh;
+  opacity: 1;
+}
+
+.sample-text1 {
+    font-size: 20px;
+    font-weight: bold;
+    animation-name: fadein;
+    animation-iteration-count: infinite;
+    padding:10px;
+}
+@keyframes fadein {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+
+.sub{
+    text-align: center;
+    padding:10px;
+}
+.mandalart_body{
+    text-align: center;
+    margin:80px;
+    
+}
+
+.mandalart_body_1{
+    text-align: center;
+    width:auto;
+    height:10px;
+    padding:10px;
+}
+
+.mandalart_new{
+    text-align: center;
+    width:10px;
+    height:10px;
+    padding:10px;
+}
+
+input[type="text"] { width: 15em; }
+input.text_small_space_right { width: 7em; height:5em; margin-right:1em; }
+input.text_small_space_left { width: 7em; height:5em; margin-left:1em; }
+input.text_small_blue { width: 7em; height:5em; background-color:#CCFFFF; }
+input.text_small_yellow { width: 7em; height:5em; background-color:#99FFFF; color:#000000; }
+input.text_small_middle { width: 7em; height:5em; background-color:yellow; color:#000000; }
+input.text_small { width: 7em; height:5em;}
+
+.none{
+    margin:0px;
+    padding:0px;
+    wrap:hard;
+}
+.up{
+    margin-top:10px;
+    margin-bottom:0px;
+}
+
+
+.return{
+    text-align:right;
+    height:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    margin:0px;
+    width: auto;
+    height: auto;
+}
+
+.fa-user-plus:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f234';
+  font-weight: 2000;
+  display: none;
+}
+
+.fa-sign-in-alt:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f2f6';
+  font-weight: 2000;
+  display: none;
+}
+
+
+.fa-plus-circle:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f055';
+  font-weight: 2000;
+  display: none;
+}
+
+.fa-undo-alt:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f2ea';
+  font-weight: 2000;
+  display: none;
+}
+
+.fa-door-open:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f52b';
+  font-weight: 2000;
+  display: none;
+}
+.fa-sticky-note:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f249';
+  font-weight: 2000;
+  display: none;
+}
+.fa-border-none:before{ 
+  font-family: "Font Awesome 5 Brands";
+  content: '\f850';
+  font-weight: 2000;
+  display: none;
+}
+
+.fa-th:before{ 
+  font-family: "Font Awesome 5 Brands";
+  content: '\f00a';
+  font-weight: 2000;
+  display: none;
+  
+}
+
+.fa-th{
+    padding:30px;
+    padding-right:60px;
+}
+.fa-sticky-note{
+    padding:30px;
+}
+
+.fa-trash:before{ 
+  font-family: "Font Awesome 5 Brands";
+  content: '\f1f8';
+  font-weight: 2000;
+  display: none;
+  
+}
+.fa-edit:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f044';
+  font-weight: 2000;
+  display: none;
+  
+}
+
+
+.fa:before{
+  font-family: "Font Awesome 5 Brands";
+  content: '\f002';
+  font-weight: 2000;
+  display: none;
+  
+}
+
+input[type=submit]{
+ font-family: FontAwesome
+}
+
+.return{
+    margin-right:100px;
+}
+.workspace{
+    margin-right:100px;
+    margin-bottom:200px;
+}
+
+.edit_body{
+    margin:100px;
+    padding:50px;
+}
+
+input.sample1{
+width:300px;
+height:30px;
+}
+
+.font_size{
+    font-size:20px;
+}

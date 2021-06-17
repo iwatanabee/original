@@ -102,6 +102,7 @@ post '/renew/memo/:id' do
 end
 
 get '/index' do
+	
     erb :index
 end
 

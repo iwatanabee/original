@@ -3,11 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>マンダラート機能</title>
+	<link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-<form action="/mandalart_name_new" method="post">
-	<p>マンダラートのタイトル：<input type="text" name="mandalart_name"></p>
-	<input type="submit" value="新しくマンダラートを制作">    
-</form>
+	<div class="signin_body">
+	  <div class="cp_iptxt">
+		<h1>マンダラートのタイトルを入力</h1><br><br>
+		<form action="/mandalart_name_new" method="post">
+			<p>マンダラートのタイトル：<input type="text" name="mandalart_name"></p>
+		  <div class="right">
+			<input type="submit" value="新しくマンダラートを制作">
+		  </div>
+		</form>
+	  </div>
+	</div>
 </body>
 </html>
