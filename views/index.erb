@@ -25,33 +25,32 @@
  <div class="sign_body">
   <div class="sign">
 		<% unless session[:user] %>
-		<h3>Idea Memory とは、思いついたアイデアをメモしたり、<br>
-		アイデア出しを行うためのマンダラートを作成できるwebサービスです。<br>
-		新規登録・ログインをして早速始めてみましょう<br>
-		</h3>
-		<br>
-		<br>
-		<h2>新規登録をする？それともログイン？</h2>
-		<div class="signup">
-			<a href="/signup">
-				<i class="fas fa-user-plus fa-4x" style="color:white;"></i>
-			</a><br>
-		 </div>
-		 <div class="sign-in">
-		 　
-		   <div class="sample-text1">
-		   	
-			<a href="/signin">
-				<i class="fas fa-sign-in-alt fa-4x" style="color:white;"></i>
-			</a><br>
-		   </div>
-		 </div>
+			<h3>Idea Memory とは、思いついたアイデアをメモしたり、<br>
+			アイデア出しを行うためのマンダラートを作成できるwebサービスです。<br>
+			新規登録・ログインをして早速始めてみましょう<br>
+			</h3>
+			<br>
+			<br>
+			<h2>新規登録をする？それともログイン？</h2>
+			<div class="signup">
+				<a href="/signup">
+					<i class="fas fa-user-plus fa-4x" style="color:white;"></i>
+				</a><br>
+			 </div>
+			 <div class="sign-in">
+			 　
+			   <div class="sample-text1">
+			   	
+				<a href="/signin">
+					<i class="fas fa-sign-in-alt fa-4x" style="color:white;"></i>
+				</a><br>
+			   </div>
+			 </div>
 		 
 			
 		<% else %>
-           
-           	<h3>こんにちは、<%= User.find(session[:user]).mail %>さん。</h3><br>
-            <h3>今日もアイデアが溢れる1日をお過ごしください</h3><br><br><br>
+   	<h3>こんにちは、<%= User.find(session[:user]).mail %>さん。</h3><br>
+    <h3>今日もアイデアが溢れる1日をお過ごしください</h3><br><br><br>
            
 		 <div class="kinou1">
 		    <a href="/user_workspaces/<%= User.find(session[:user]).id %>">
@@ -63,8 +62,8 @@
 		 </div>
 		 <div class="right">
 		 	<pre>
-		                                                         <a href="/signout"><i class="fas fa-undo-alt fa-3x" style="color:white;"></i></a>
-		    </pre>
+		 	  <a href="/signout"><i class="fas fa-undo-alt fa-3x" style="color:white;"></i></a>
+		 	</pre>
 		 </div>
 		<% end %>
   </div>

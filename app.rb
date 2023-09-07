@@ -1,59 +1,54 @@
 require 'bundler/setup'
 Bundler.require
 require 'sinatra/reloader' if development?
-
 require './models'
 require 'sinatra/activerecord'
 require 'open-uri'
 require 'sinatra/json'
 
 enable :sessions
+
 helpers do
 	def current_user
 		User.find_by(id: session[:user])
 	end
 end
 
-
-get '/' do
-
-    erb :index
-end
-
-get '/signin' do
-    erb :sign_in
+get '/index' do
+	erb :index
 end
 
 get '/signup' do
-    erb :sign_up
+	erb :sign_up
 end
 
-post '/signin' do
-    user = User.find_by(mail: params[:mail])
-    if user && user.authenticate(params[:password])
-        session[:user] = user.id
-    end
-    redirect '/'
+get '/signin' do
+	erb :sign_in
 end
 
 post '/signup' do
-    user = User.create(
-    	mail: params[:mail],
-    	password: params[:password],
-    	password_confirmation: params[:password_confirmation])
-    	
-    if user.persisted?
-        session[:user]= user.id
-    end
-    redirect '/index'
+	User.create(
+		mail: params[:mail],
+		password: params[:password],
+		password_confirmation: params[:password_confirmation]
+	)
+
+	redirect '/signin'
+end
+
+post '/signin' do
+	user = User.find_by(mail: params[:mail])
+	if user && user.authenticate(params[:password])
+		session[:user] = user.id
+	end
+
+	redirect '/index'
 end
 
 get '/signout' do
     session[:user] = nil
-    redirect '/'
+    redirect '/index'
 end
-
-
 
 get '/memo' do
     if current_user.nil?
@@ -78,9 +73,8 @@ post '/new/memo/:id' do
     name: params[:name],
     body: params[:body],
     user_id: params[:id]
-    })
-    
-    redirect '/memo'
+  })
+  redirect '/memo'
 end
 
 post '/delete/memo/:id' do
@@ -101,23 +95,8 @@ post '/renew/memo/:id' do
     redirect '/memo'
 end
 
-get '/index' do
-	
-    erb :index
-end
-
-
-
-
-
-
-
 get '/mandalart' do
-	if current_user.nil?
-    	@workspaces = Workspace.none
-    else
-    	@workspaces = current_user.workspaces
-    end
+  	@workspaces = current_user.workspaces
     erb :mandalart
 end
 
@@ -135,7 +114,6 @@ post '/mandalart_name_new' do
 		name: params[:mandalart_name]
 	})
 	redirect '/workspace2'
-	redirect '/mandalart'
 end
 
 get '/workspace2' do
@@ -332,17 +310,6 @@ post '/renew/cell/:id' do
     
     redirect '/mandalart'
 end
-
-
-
-
-
-
-
-
-
-
-
 
 get '/workspace/:id' do
 	erb :workspace_edit

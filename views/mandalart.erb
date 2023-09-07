@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<title>マンダラート機能</title>
-	<link rel="stylesheet" href="/css/index.css">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <meta charset="UTF-8">
+  <title>マンダラート機能</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-<div class="title_memo">
- <h1>マンダラート機能</h1>
-</div>
-<div class="sub">
- <h2>自分だけのマンダラートを作成しよう</h2>
-</div>
-<div class="memo_body1">
-	    <div class="memo_body">
-	    	
-			<% @workspaces.each do |workspace| %>
-		     <div class="border">
-				<div class="memo_title">
-					<p class="p-size"><%= workspace.name %></p>
-				</div>
-						<a href="/edit/mandalart/<%= workspace.id %>"><i class="fas fa-edit fa-2x"style="color:white;"></i></a>
-						<form action="/delete/mandalart/<%= workspace.id %>" method="post">
-							<input type="submit" value="DELETE">
-					    </form>
-			 </div>
-			 
-			<% end %>
+  <div class="title_memo">
+   <h1>マンダラート機能</h1>
+  </div>
+  <div class="sub">
+   <h2>自分だけのマンダラートを作成しよう</h2>
+  </div>
+  <div class="memo_body1">
+    <div class="memo_body">
+      <% @workspaces.each do |workspace| %>
+        <div class="border">
+          <div class="memo_title">
+          	<p class="p-size"><%= workspace.name %></p>
+          </div>
+      		<a href="/edit/mandalart/<%= workspace.id %>"><i class="fas fa-edit fa-2x"style="color:white;"></i></a>
+      		<form action="/delete/mandalart/<%= workspace.id %>" method="post">
+        		<input type="submit" value="DELETE">
+          </form>
         </div>
-</div>
-
-<div class="right">
-	<div class="return">
-		<a href="/index">
-			<i class="fas fa-undo-alt fa-4x" style="color:white;"></i>
-		</a><br>
-	</div>
-	<div class="workspace">
-		<a href="/workspace">
-			<i class="fas fa-plus-circle fa-4x" style="color:white;"></i>
-	</div>
-	</a>
-</div>	
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="right">
+  	<div class="return">
+  		<a href="/index">
+  			<i class="fas fa-undo-alt fa-4x" style="color:white;"></i>
+  		</a><br>
+  	</div>
+  	<div class="workspace">
+  		<a href="/workspace">
+  			<i class="fas fa-plus-circle fa-4x" style="color:white;"></i>
+  	</div>
+  	</a>
+  </div>	
 </body>
 </html>
 
