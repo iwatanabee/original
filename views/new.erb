@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title>メモ機能</title>
-	<link rel="stylesheet" href="/css/index.css">
-</head>
-<body>
-	
-	<div class="signin_body">
-	  <div class="cp_iptxt">
-		<h1>メモを入力</h1><br>
-		<form action="/new/memo/id" method="post">
-		　<div class="font_size">
-			<p>題名：<input type="text" name="name"></p>
-			<p>本文：<input type="text" name="body"></p>
-		  </div>
-		  <div class="right">
-			<input type="submit" value="新しくメモを追加">
-		  </div>
-		</form>
-	  </div>
-	</div>
-</body>
-</html>
-
+<h1>メモを入力</h1>
+<form action="/new/memo/id" method="post">
+	題名：<input type="text" name="name"><br>
+	本文：<textarea name="body"></textarea><br>
+	<input type="submit" value="新しくメモを追加">
+</form>

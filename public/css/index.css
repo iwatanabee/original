@@ -10,9 +10,9 @@ body{
     /* 全体の余白 */
     padding: 10px;
     
-    color:white;
+    color: black;
     
-    background-color:#33ede6;
+    background-color: white;
 }
 input.text1{
     width: 15em;

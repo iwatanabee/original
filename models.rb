@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
      presence: true,
      format: {with:/\A.+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+\z/}
     validates :password,
-    #  format: {with:/(?=.*?[a-z])(?=.*?[0-9])/},
+     format: {with:/(?=.*?[a-z])(?=.*?[0-9])/},
      length: {in: 5..10}
      
     has_many :memos

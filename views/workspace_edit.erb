@@ -1,121 +1,93 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title>マンダラート機能</title>
-	<link rel="stylesheet" href="/css/index.css">
-</head>
-<body>
-<div class="mandalart_body_1">
- <h1>マンダラートを作成する</h1>
-  <div class="mandalart_body">
-	<form action="/renew/cell/<%= @cell.id %>" method="post">
-		<div class="kinou">
-					<p class="none"><input type="text" name="body11" value="<%= @cell.body11 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body12" value="<%= @cell.body12 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body13" value="<%= @cell.body13 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body14" value="<%= @cell.body14 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body15" value="<%= @cell.body15 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body16" value="<%= @cell.body16 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body17" value="<%= @cell.body17 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body18" value="<%= @cell.body18 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body19" value="<%= @cell.body19 %>"class="text_small"></p>
-		</div>
-		<div class="kinou">
-					<p class="none"><input type="text" name="body21" value="<%= @cell.body21 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body22" value="<%= @cell.body22 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body23" value="<%= @cell.body23 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body24" value="<%= @cell.body24 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body25" value="<%= @cell.body25 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body26" value="<%= @cell.body26 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body27" value="<%= @cell.body27 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body28" value="<%= @cell.body28 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body29" value="<%= @cell.body29 %>"class="text_small"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body31" value="<%= @cell.body31 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body32" value="<%= @cell.body32 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body33" value="<%= @cell.body33 %>"class="text_small_space_right"></p>
-					<p class="up"><input type="text" name="body34" value="<%= @cell.body34 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body35" value="<%= @cell.body35 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body36" value="<%= @cell.body36 %>"class="text_small_space_right"></p>
-					<p class="up"><input type="text" name="body37" value="<%= @cell.body37 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body38" value="<%= @cell.body38 %>"class="text_small_space_right"></p>
-					<p class="none"><input type="text" name="body39" value="<%= @cell.body39 %>"class="text_small_space_right"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body41" value="<%= @cell.body41 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body42" value="<%= @cell.body42 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body43" value="<%= @cell.body43 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body44" value="<%= @cell.body44 %>"class="text_small_blue"></p>
-					<p class="none"><input type="text" name="body45" value="<%= @cell.body45 %>"class="text_small_blue"></p>
-					<p class="none"><input type="text" name="body46" value="<%= @cell.body46 %>"class="text_small_blue"></p>
-					<p class="up"><input type="text" name="body47" value="<%= @cell.body47 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body48" value="<%= @cell.body48 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body49" value="<%= @cell.body49 %>"class="text_small"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body51" value="<%= @cell.body51 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body52" value="<%= @cell.body52 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body53" value="<%= @cell.body53 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body54" value="<%= @cell.body54 %>"class="text_small_blue"></p>
-					<p class="none"><input type="text" name="body55" value="<%= @cell.body55 %>"class="text_small_middle"></p>
-					<p class="none"><input type="text" name="body56" value="<%= @cell.body56 %>"class="text_small_blue"></p>
-					<p class="up"><input type="text" name="body57" value="<%= @cell.body57 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body58" value="<%= @cell.body58 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body59" value="<%= @cell.body59 %>"class="text_small"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body61" value="<%= @cell.body61 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body62" value="<%= @cell.body62 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body63" value="<%= @cell.body63 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body64" value="<%= @cell.body64 %>"class="text_small_blue"></p>
-					<p class="none"><input type="text" name="body65" value="<%= @cell.body65 %>"class="text_small_blue"></p>
-					<p class="none"><input type="text" name="body66" value="<%= @cell.body66 %>"class="text_small_blue"></p>
-					<p class="up"><input type="text" name="body67" value="<%= @cell.body67 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body68" value="<%= @cell.body68 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body69" value="<%= @cell.body69 %>"class="text_small"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body71" value="<%= @cell.body71 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body72" value="<%= @cell.body72 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body73" value="<%= @cell.body73 %>"class="text_small_space_left"></p>
-					<p class="up"><input type="text" name="body74" value="<%= @cell.body74 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body75" value="<%= @cell.body75 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body76" value="<%= @cell.body76 %>"class="text_small_space_left"></p>
-					<p class="up"><input type="text" name="body77" value="<%= @cell.body77 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body78" value="<%= @cell.body78 %>"class="text_small_space_left"></p>
-					<p class="none"><input type="text" name="body79" value="<%= @cell.body79 %>"class="text_small_space_left"></p>
-				 </div>
-				 <div class="kinou">
-					<p class="none"><input type="text" name="body81" value="<%= @cell.body81 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body82" value="<%= @cell.body82 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body83" value="<%= @cell.body83 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body84" value="<%= @cell.body84 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body85" value="<%= @cell.body85 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body86" value="<%= @cell.body86 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body87" value="<%= @cell.body87 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body88" value="<%= @cell.body88 %>"class="text_small_yellow"></p>
-					<p class="none"><input type="text" name="body89" value="<%= @cell.body89 %>"class="text_small"></p>
-				</div>
-				<div class="kinou">
-					<p class="none"><input type="text" name="body91" value="<%= @cell.body91 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body92" value="<%= @cell.body92 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body93" value="<%= @cell.body93 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body94" value="<%= @cell.body94 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body95" value="<%= @cell.body95 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body96" value="<%= @cell.body96 %>"class="text_small"></p>
-					<p class="up"><input type="text" name="body97" value="<%= @cell.body97 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body98" value="<%= @cell.body98 %>"class="text_small"></p>
-					<p class="none"><input type="text" name="body99" value="<%= @cell.body99 %>"class="text_small"></p><br>
-				 </div>
-		<div class="right">
-　　　　　　<input type="submit" value="編集完了">
-　　　　</div>
-	
-</form>
-</div>
-</div>
-</body>
-</html>
+<h1>マンダラートを作成する</h1>
+<form action="/renew/cell/<%= @cell.id %>" method="post">
+		<p class="none"><input type="text" name="body11" value="<%= @cell.body11 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body12" value="<%= @cell.body12 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body13" value="<%= @cell.body13 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body14" value="<%= @cell.body14 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body15" value="<%= @cell.body15 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body16" value="<%= @cell.body16 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body17" value="<%= @cell.body17 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body18" value="<%= @cell.body18 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body19" value="<%= @cell.body19 %>"class="text_small"></p>
 
+		<p class="none"><input type="text" name="body21" value="<%= @cell.body21 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body22" value="<%= @cell.body22 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body23" value="<%= @cell.body23 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body24" value="<%= @cell.body24 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body25" value="<%= @cell.body25 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body26" value="<%= @cell.body26 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body27" value="<%= @cell.body27 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body28" value="<%= @cell.body28 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body29" value="<%= @cell.body29 %>"class="text_small"></p>
+
+		<p class="none"><input type="text" name="body31" value="<%= @cell.body31 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body32" value="<%= @cell.body32 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body33" value="<%= @cell.body33 %>"class="text_small_space_right"></p>
+		<p class="up"><input type="text" name="body34" value="<%= @cell.body34 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body35" value="<%= @cell.body35 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body36" value="<%= @cell.body36 %>"class="text_small_space_right"></p>
+		<p class="up"><input type="text" name="body37" value="<%= @cell.body37 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body38" value="<%= @cell.body38 %>"class="text_small_space_right"></p>
+		<p class="none"><input type="text" name="body39" value="<%= @cell.body39 %>"class="text_small_space_right"></p>
+
+		<p class="none"><input type="text" name="body41" value="<%= @cell.body41 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body42" value="<%= @cell.body42 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body43" value="<%= @cell.body43 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body44" value="<%= @cell.body44 %>"class="text_small_blue"></p>
+		<p class="none"><input type="text" name="body45" value="<%= @cell.body45 %>"class="text_small_blue"></p>
+		<p class="none"><input type="text" name="body46" value="<%= @cell.body46 %>"class="text_small_blue"></p>
+		<p class="up"><input type="text" name="body47" value="<%= @cell.body47 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body48" value="<%= @cell.body48 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body49" value="<%= @cell.body49 %>"class="text_small"></p>
+
+		<p class="none"><input type="text" name="body51" value="<%= @cell.body51 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body52" value="<%= @cell.body52 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body53" value="<%= @cell.body53 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body54" value="<%= @cell.body54 %>"class="text_small_blue"></p>
+		<p class="none"><input type="text" name="body55" value="<%= @cell.body55 %>"class="text_small_middle"></p>
+		<p class="none"><input type="text" name="body56" value="<%= @cell.body56 %>"class="text_small_blue"></p>
+		<p class="up"><input type="text" name="body57" value="<%= @cell.body57 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body58" value="<%= @cell.body58 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body59" value="<%= @cell.body59 %>"class="text_small"></p>
+
+		<p class="none"><input type="text" name="body61" value="<%= @cell.body61 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body62" value="<%= @cell.body62 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body63" value="<%= @cell.body63 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body64" value="<%= @cell.body64 %>"class="text_small_blue"></p>
+		<p class="none"><input type="text" name="body65" value="<%= @cell.body65 %>"class="text_small_blue"></p>
+		<p class="none"><input type="text" name="body66" value="<%= @cell.body66 %>"class="text_small_blue"></p>
+		<p class="up"><input type="text" name="body67" value="<%= @cell.body67 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body68" value="<%= @cell.body68 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body69" value="<%= @cell.body69 %>"class="text_small"></p>
+
+		<p class="none"><input type="text" name="body71" value="<%= @cell.body71 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body72" value="<%= @cell.body72 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body73" value="<%= @cell.body73 %>"class="text_small_space_left"></p>
+		<p class="up"><input type="text" name="body74" value="<%= @cell.body74 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body75" value="<%= @cell.body75 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body76" value="<%= @cell.body76 %>"class="text_small_space_left"></p>
+		<p class="up"><input type="text" name="body77" value="<%= @cell.body77 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body78" value="<%= @cell.body78 %>"class="text_small_space_left"></p>
+		<p class="none"><input type="text" name="body79" value="<%= @cell.body79 %>"class="text_small_space_left"></p>
+
+		<p class="none"><input type="text" name="body81" value="<%= @cell.body81 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body82" value="<%= @cell.body82 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body83" value="<%= @cell.body83 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body84" value="<%= @cell.body84 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body85" value="<%= @cell.body85 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body86" value="<%= @cell.body86 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body87" value="<%= @cell.body87 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body88" value="<%= @cell.body88 %>"class="text_small_yellow"></p>
+		<p class="none"><input type="text" name="body89" value="<%= @cell.body89 %>"class="text_small"></p>
+
+		<p class="none"><input type="text" name="body91" value="<%= @cell.body91 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body92" value="<%= @cell.body92 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body93" value="<%= @cell.body93 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body94" value="<%= @cell.body94 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body95" value="<%= @cell.body95 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body96" value="<%= @cell.body96 %>"class="text_small"></p>
+		<p class="up"><input type="text" name="body97" value="<%= @cell.body97 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body98" value="<%= @cell.body98 %>"class="text_small"></p>
+		<p class="none"><input type="text" name="body99" value="<%= @cell.body99 %>"class="text_small"></p><br>
+ <input type="submit" value="編集完了">
+</form>
