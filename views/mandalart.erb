@@ -3,7 +3,7 @@
 
 <% @workspaces.each do |workspace| %>
 	<p class="p-size"><%= workspace.name %></p>
-  <a href="/edit/mandalart/<%= workspace.id %>"><i class="fas fa-edit fa-2x"style="color:white;"></i></a>
+  <a href="/edit/mandalart/<%= workspace.id %>"><i class="fas fa-edit fa-2x"></i></a>
   <form action="/delete/mandalart/<%= workspace.id %>" method="post">
 	  <input type="submit" value="DELETE">
   </form>

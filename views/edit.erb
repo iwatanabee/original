@@ -1,6 +1,6 @@
 <h1>メモの内容を変更</h1>
 <form action="/renew/memo/<%= @memo.id %>" method="post">
   <p>名前：<input type="text" name="name" value="<%= @memo.name %>"></p>
-  <p>本文：<input type="text" name="body" class="text1"value="<%= @memo.body %>"></p>
+  <textarea name="body"><%= @memo.body %></textarea>
   <input type="submit" value="編集完了">
 </form>

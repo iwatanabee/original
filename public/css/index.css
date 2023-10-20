@@ -3,16 +3,14 @@
 }
 
 body{
-    /* 全体の横幅 */
+     /*全体の横幅 */
     width: auto;
-    /* 全体を中央寄せ */
+     /*全体を中央寄せ */
     margin: auto;
-    /* 全体の余白 */
+     /*全体の余白 */
     padding: 10px;
     
-    color: black;
-    
-    background-color: white;
+    color:black;
 }
 input.text1{
     width: 15em;
@@ -30,8 +28,6 @@ input.text1{
     padding:10%;
     width: auto;
     height: auto;
-    font-size:100px;
-    
 }
 .h3{
     text-shadow:2px 2px 3px #f51818;
@@ -95,8 +91,6 @@ input.text1{
     border: solid;
     border-radius: 8px;
     border-width: 20px;
-    
-    
 }
 .signup{
     margin:1%;
@@ -108,18 +102,18 @@ input.text1{
 }
 
 
-.kinou1{
+.kinou{
     float: left;
     list-style: none;
     margin: 0px;
     padding:0px;
 }
 
-.kinou{
+.cell-format{
     float: left;
     list-style: none;
     margin:0px;
-    
+    padding:0px;
 }
 
 
@@ -209,7 +203,6 @@ to {
 .mandalart_body{
     text-align: center;
     margin:80px;
-    
 }
 
 .mandalart_body_1{
@@ -221,8 +214,8 @@ to {
 
 .mandalart_new{
     text-align: center;
-    width:10px;
-    height:10px;
+    width:100px;
+    height:100px;
     padding:10px;
 }
 
@@ -235,15 +228,16 @@ input.text_small_middle { width: 7em; height:5em; background-color:yellow; color
 input.text_small { width: 7em; height:5em;}
 
 .none{
-    margin:0px;
-    padding:0px;
     wrap:hard;
+    margin-top:0px;
+    margin-buttom:0px;
 }
 .up{
     margin-top:10px;
-    margin-bottom:0px;
 }
-
+.col-4{
+    width: 10%;
+}
 
 .return{
     text-align:right;
