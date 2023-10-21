@@ -1,3 +1,6 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
 <h1>マンダラートを作成する</h1>
 <form action="/mandalart_new" method="post">
 		 <div class="cell-format">
@@ -101,5 +104,15 @@
 		 </div>
 		 <input type="hidden" name="workspace_id" value="<%= @workspace.id %>">
 		 <input type="submit" value="マンダラートを保存する">
+		 <button id="printButton">pdfに変換</button>
+		 <script>
+	        // ボタン要素を取得
+	        var printButton = document.getElementById("printButton");
+	
+	        // ボタンがクリックされたときの処理
+	        printButton.addEventListener("click", function() {
+	            window.print(); // 印刷ダイアログを開く
+	        });
+    	　</script>
 </form>
 

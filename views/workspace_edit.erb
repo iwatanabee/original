@@ -100,4 +100,14 @@
 		<div class="none"><input type="text" name="body99" value="<%= @cell.body99 %>"class="text_small"></div><br>
 	</div>
 	<input type="submit" value="編集完了">
+	<button id="printButton">pdfに変換</button>
+	 <script>
+	    // ボタン要素を取得
+	    var printButton = document.getElementById("printButton");
+	
+	    // ボタンがクリックされたときの処理
+	    printButton.addEventListener("click", function() {
+	        window.print(); // 印刷ダイアログを開く
+	    });
+	 </script>
 </form>
