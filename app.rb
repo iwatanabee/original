@@ -54,22 +54,24 @@ get '/signout' do
     redirect '/index'
 end
 
+# メモ機能
+
 get '/memo' do
     if current_user.nil?
     	@memos = Memo.none
     else
     	@memos = current_user.memos
     end	
-    erb :memo
+    erb :'memos/index'
 end
 
 get "/user_memos/:id" do
     @memos = User.find(params[:id]).memos.all
-    erb :memo
+    erb :'memos/index'
 end
 
 get '/new/memo' do
-    erb :new
+    erb :'memos/new'
 end
 
 post '/new/memo/:id' do
@@ -88,7 +90,7 @@ end
 
 get '/edit/memo/:id' do
 	@memo = Memo.find(params[:id])
-    erb :edit
+    erb :'memos/edit'
 end
 
 post '/renew/memo/:id' do

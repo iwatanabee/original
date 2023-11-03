@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_13_201704) do
+ActiveRecord::Schema.define(version: 2021_06_10_133009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 2021_06_13_201704) do
     t.string "body11"
     t.string "body12"
     t.string "body13"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "body14"
     t.string "body15"
     t.string "body16"
@@ -99,15 +97,24 @@ ActiveRecord::Schema.define(version: 2021_06_13_201704) do
     t.string "body97"
     t.string "body98"
     t.string "body99"
-    t.integer "workspace_id"
+    t.integer "mandalart_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mandalarts", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "memos", force: :cascade do |t|
     t.string "name"
     t.string "body"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -115,13 +122,6 @@ ActiveRecord::Schema.define(version: 2021_06_13_201704) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "workspaces", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
   end
 
 end
