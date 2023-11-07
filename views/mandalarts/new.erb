@@ -2,7 +2,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
 
 <h1>マンダラートを作成する</h1>
-<form action="/mandalart_new" method="post">
+<form action="/new/mandalart" method="post">
+		<p>マンダラートのタイトル：<input type="text" name="mandalart_title"></p>
 		 <div class="cell-format">
 			<div class="none"><input type="text" name="body11" class="text_small"></div>
 			<div class="none"><input type="text" name="body12" class="text_small"></div>
@@ -102,7 +103,6 @@
 			<div class="none"><input type="text" name="body98" class="text_small"></div>
 			<div class="none"><input type="text" name="body99" class="text_small"></div><br>
 		 </div>
-		 <input type="hidden" name="workspace_id" value="<%= @workspace.id %>">
 		 <input type="submit" value="マンダラートを保存する">
 		 <button id="printButton">pdfに変換</button>
 		 <script>

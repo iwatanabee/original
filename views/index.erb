@@ -11,7 +11,7 @@
 <% else %>
  	<p>こんにちは、<%= User.find(session[:user]).mail %>さん<br></p>
   <p>今日もアイデアが溢れる1日をお過ごしください</p>
-  <a href="/user_workspaces/<%= User.find(session[:user]).id %>"><i class="fas fa-th fa-10x"　style="color:black;"></i></a>
+  <a href="/mandalarts"><i class="fas fa-th fa-10x"　style="color:black;"></i></a>
   <a href="/user_memos/<%= User.find(session[:user]).id %>"><i class="far fa-sticky-note fa-10x" style="color:black;"></i></a>
   <a href="/signout"><i class="fas fa-undo-alt fa-3x"></i></a>
 <% end %>
