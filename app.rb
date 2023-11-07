@@ -103,34 +103,25 @@ end
 
 # マンダラート機能
 
-get '/mandalart' do
-  	@workspaces = current_user.workspaces
-    erb :mandalart
+get '/mandalarts' do
+  	@mandalarts = current_user.mandalarts
+    erb :'mandalarts/index'
 end
 
-get "/user_workspaces/:id" do
-    @workspaces = User.find(params[:id]).workspaces.all
-    erb :mandalart
+get "/mandalarts/:id" do
+    @mandalarts = User.find(params[:id]).mandalart.all
+    erb :'mandalarts/index'
 end
 
-get "/workspace_title" do
-  erb :workspace_title
+get "/new/mandalart" do
+  erb :'mandalarts/new'
 end
 
-post '/mandalart_new_title' do
-	current_user.workspaces.create({
-		name: params[:mandalart_name],
-		user_id: current_user.id
-	})
-	redirect '/mandalart_new_body'
-end
-
-get '/mandalart_new_body' do
-  @workspace = current_user.workspaces[-1]
-	erb :workspace_body
-end
-
-post '/mandalart_new' do
+post '/new/mandalart' do
+  Mandalart.create({
+    name: params[:mandalart_title],
+    user_id: current_user.id
+  })
 	Cell.create({
 		body11: params[:body11],
 		body12: params[:body12],
@@ -213,20 +204,20 @@ post '/mandalart_new' do
 		body97: params[:body97],
 		body98: params[:body98],
 		body99: params[:body99],
-		workspace_id: params[:workspace_id],
+		mandalart_id: current_user.mandalarts.ids[-1],
 	})
-	redirect '/mandalart'
+	redirect '/mandalarts'
 end
 
 post '/delete/mandalart/:id' do 
-	Workspace.find(params[:id]).destroy
-	redirect '/mandalart'
+	Mandalart.find(params[:id]).destroy
+	Cell.find_by(mandalart_id: params[:id]).destroy
+	redirect '/mandalarts'
 end
 
 get '/edit/mandalart/:id' do
-  @cell = Cell.find_by(workspace_id: params[:id])
-  # binding.irb
-  erb :workspace_edit
+  @cell = Cell.find_by(mandalart_id: params[:id])
+  erb :'mandalarts/edit'
 end
 
 post '/renew/cell/:id' do
@@ -314,14 +305,5 @@ post '/renew/cell/:id' do
   		body98: params[:body98],
   		body99: params[:body99],
   })
-  redirect '/mandalart'
-end
-
-get '/workspace/:id' do
-	erb :workspace_edit
-end
-
-get "/workspace_cells/:id" do
-    @cells = Workspace.find(params[:id]).memos.all
-    erb :workspace
+  redirect '/mandalarts'
 end
