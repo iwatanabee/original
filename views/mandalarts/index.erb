@@ -1,6 +1,6 @@
 <h1>マンダラート機能</h1>
 <p>自分だけのマンダラートを作成しよう</p>
-<div class="container p-5">
+<div class="container-fluid p-5" style="height:550px; overflow: scroll;">
 	<div class="row">
 		<% @mandalarts.each do |mandalart| %>
 		<div class="col-sm-6 mb-5" style="text-align: left;">
@@ -18,6 +18,6 @@
 	</div>
 </div>
 <div style="text-align: right;">
-	<!--<a href="/index"><i class="fas fa-undo-alt fa-5x"></i></a><br>-->
 	<a href="/new/mandalart"><i class="fas fa-plus-circle fa-5x"></i>
+	<a href="/index"><i class="fas fa-undo-alt fa-1x"></i></a><br>
 </div>
