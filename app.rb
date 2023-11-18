@@ -5,6 +5,7 @@ require './models'
 require 'sinatra/activerecord'
 require 'open-uri'
 require 'sinatra/json'
+require 'sinatra/flash'
 
 enable :sessions
 
@@ -36,7 +37,6 @@ post '/signup' do
 		password: params[:password],
 		password_confirmation: params[:password_confirmation]
 	)
-
 	redirect '/signin'
 end
 
@@ -45,7 +45,6 @@ post '/signin' do
 	if user && user.authenticate(params[:password])
 		session[:user] = user.id
 	end
-
 	redirect '/index'
 end
 
@@ -104,8 +103,14 @@ end
 # マンダラート機能
 
 get '/mandalarts' do
+  if current_user
   	@mandalarts = current_user.mandalarts
+  # 	binding.irb
     erb :'mandalarts/index'
+  else
+    flash[:alert] = 'セッションが切れました。もう一度ログインしてください'
+    erb :'sign_in'
+  end
 end
 
 get "/mandalarts/:id" do
@@ -216,12 +221,15 @@ post '/delete/mandalart/:id' do
 end
 
 get '/edit/mandalart/:id' do
+  @mandalart = Mandalart.find(params[:id])
   @cell = Cell.find_by(mandalart_id: params[:id])
   erb :'mandalarts/edit'
 end
 
-post '/renew/cell/:id' do
-  cell = Cell.find(params[:id])
+post '/edit/mandalart/:id' do
+  mandalart = Mandalart.find(params[:id])
+  mandalart.update(name: params[:mandalart_title])
+  cell = Cell.find_by(mandalart_id: params[:id])
   cell.update({
       body11: params[:body11],
   		body12: params[:body12],

@@ -10,9 +10,9 @@
  	<p>こんにちは、<%= User.find(session[:user]).mail %>さん<br></p>
  	<p>マンダラートやメモ機能を使ってアイデア出しを始めてみましょう</p>
   <p class="pb-5">今日もアイデアが溢れる1日をお過ごしください</p>
-  <h2 class="pb-3">アイデア出しをする</h2>
+  <h2 class="pb-3">マンダラート機能</h2>
   <a href="/mandalarts" class="p-5"><i class="fas fa-th fa-5x"　style="color:black;"></i></a>
-  <a href="/user_memos/<%= User.find(session[:user]).id %>" class="p-5"><i class="far fa-sticky-note fa-5x" style="color:black;"></i></a>
+  <!--<a href="/user_memos/<%= User.find(session[:user]).id %>" class="p-5"><i class="far fa-sticky-note fa-5x" style="color:black;"></i></a>-->
   <h2 class="pt-5 pb-3">ログアウトする</h2>
   <a href="/signout"><i class="fas fa-undo-alt fa-3x"></i></a>
 <% end %>
