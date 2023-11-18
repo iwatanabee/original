@@ -1,12 +1,12 @@
 <h1>マンダラートを作成する</h1>
 <form action="/new/mandalart" method="post">
 		<p>タイトル：<input type="text" name="mandalart_title"></p>
-		 <div class="container" style="min-height:500px;">
+		 <div class="container-fluid" style="min-height:500px;">
 		 	<div class="row">
 		 		<% range = 1..9 %>
 		 		<% range.each do |i| %>
-		 			<div class="col-sm-4 p-1">
-			 			<div class="container">
+		 			<div class="col-sm-4 pb-1">
+			 			<div class="container-fluid">
 			 				<div class="row">
 	 		          <% range.each do |j| %>
 					 				<div class="col-4 p-0">
