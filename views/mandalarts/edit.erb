@@ -1,11 +1,11 @@
 <form action="/edit/mandalart/<%= @cell.id %>" method="post">
 	<p><input type="text" name="mandalart_title" value="<%= @mandalart.name %>"></p>
-		 <div class="container" style="min-height:500px;">
+		 <div class="container-fluid" style="min-height:500px;">
 		 	<div class="row">
 		 		<% range = 1..9 %>
 		 		<% range.each do |i| %>
 		 			<div class="col-sm-4 p-1">
-			 			<div class="container">
+			 			<div class="container-fluid">
 			 				<div class="row">
 	 		          <% range.each do |j| %>
 					 				<div class="col-4 p-0">
